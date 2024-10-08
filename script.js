@@ -1,11 +1,14 @@
+// Crear el canvas y contexto
 const canvas = document.createElement("canvas");
 document.body.appendChild(canvas);
 const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
+// Array de partículas
 let particlesArray = [];
 
+// Clase Partícula
 class Particle {
     constructor(x, y, size, speedX, speedY) {
         this.x = x;
@@ -17,14 +20,13 @@ class Particle {
     update() {
         this.x += this.speedX;
         this.y += this.speedY;
-    
+
         // Reaparecer en el lado opuesto si sale de los límites
         if (this.x > canvas.width) this.x = 0;
         if (this.x < 0) this.x = canvas.width;
         if (this.y > canvas.height) this.y = 0;
         if (this.y < 0) this.y = canvas.height;
     }
-    
     draw() {
         ctx.fillStyle = "#1abc9c";
         ctx.beginPath();
@@ -34,9 +36,10 @@ class Particle {
     }
 }
 
+// Inicializar partículas
 function initParticles() {
     particlesArray = [];
-    for (let i = 0; i < 40; i++) {
+    for (let i = 0; i < 60; i++) { // Ajusta la cantidad según el rendimiento
         const size = Math.random() * 3 + 1;
         const x = Math.random() * canvas.width;
         const y = Math.random() * canvas.height;
@@ -46,16 +49,19 @@ function initParticles() {
     }
 }
 
+// Manejar las partículas y conexiones
 function handleParticles() {
     for (let i = 0; i < particlesArray.length; i++) {
         particlesArray[i].update();
         particlesArray[i].draw();
+
+        // Conectar partículas cercanas
         for (let j = i; j < particlesArray.length; j++) {
             const dx = particlesArray[i].x - particlesArray[j].x;
             const dy = particlesArray[i].y - particlesArray[j].y;
             const distance = Math.sqrt(dx * dx + dy * dy);
-            if (distance < 100) {
-                ctx.strokeStyle = "#1abc9c";
+            if (distance < 80) { // Ajusta la distancia de conexión
+                ctx.strokeStyle = "rgba(26, 188, 156, 0.3)";
                 ctx.lineWidth = 0.2;
                 ctx.beginPath();
                 ctx.moveTo(particlesArray[i].x, particlesArray[i].y);
@@ -63,24 +69,23 @@ function handleParticles() {
                 ctx.stroke();
             }
         }
-        if (particlesArray[i].size <= 0.3) {
-            particlesArray.splice(i, 1);
-            i--;
-        }
     }
 }
 
+// Animación de partículas
 function animateParticles() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     handleParticles();
     requestAnimationFrame(animateParticles);
 }
 
+// Ajustar el tamaño del canvas al cambiar el tamaño de la ventana
 window.addEventListener("resize", () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     initParticles();
 });
 
+// Llamar a las funciones iniciales
 initParticles();
 animateParticles();

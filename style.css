@@ -7,9 +7,37 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    overflow: hidden;
     background-color: #121212;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #000000 #ebdede;
+    height: 100vh; 
+    overflow-x: hidden; 
 }
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #3d3d3d;
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #a8a6a6;
+  }
+
+
+
+/* Canvas de fondo */
 canvas {
     position: fixed;
     top: 0;
@@ -21,9 +49,15 @@ canvas {
 
 /* Navegación */
 .navegacion {
-    background: linear-gradient(90deg, #1f1f1f, #333);
+    background: linear-gradient(90deg, rgba(78, 78, 78, 0.22), rgba(51, 51, 51, 0.31));
+    backdrop-filter: blur(2px);
     padding: 1rem 0;
     text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Añade sombra para mayor visibilidad */
 }
 
 .navegacion ul {
@@ -37,26 +71,31 @@ canvas {
     color: #f5f5f5;
     font-weight: bold;
     font-size: 1.2rem;
+    padding: 10px 15px;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .navegacion li a:hover {
     color: #1abc9c;
+    border-bottom: 2px solid white;
 }
 
 /* Sección de Inicio */
 .inicio {
-    padding: 2rem;
+    padding: 6rem 2rem 2rem; /* Espacio extra arriba para compensar la barra fija */
     max-width: 1000px;
     margin: auto;
 }
 
-.inicio h1 {
+.inicio h1, .inicio h2 {
     font-size: 2.8rem;
     color: #b3e4da;
     margin-bottom: 1rem;
-    text-align: center;
+}
+
+p {
+    color: white;
 }
 
 .inicio .intro {
@@ -88,7 +127,9 @@ canvas {
 
 .card:hover {
     transform: scale(1.05);
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 20px rgba(26, 188, 156, 1), 
+                0px 0px 40px rgba(26, 188, 156, 0.8), 
+                0px 0px 60px rgba(26, 188, 156, 0.6); 
 }
 
 .card h2 {
