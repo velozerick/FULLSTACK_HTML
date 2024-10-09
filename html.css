@@ -434,3 +434,115 @@ button:active {
     transform: translateY(1px); /* Reduce el efecto de elevación */
     box-shadow: 0 4px 8px rgba(20, 143, 119, 0.2); /* Sombra más sutil */
 }
+
+
+
+/*==============SECCION LLISTAS==============*/
+/* Párrafos */
+#listas-numeradas p, #listas-bullets p, #listas-definicion p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #e0e0e0;
+}
+
+/* Estilo para Ejemplos de Código */
+#listas-numeradas pre, #listas-bullets pre, #listas-definicion pre {
+    background-color: #333;
+    color: #f5f5f5;
+    padding: 1rem;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+#listas-numeradas code, #listas-bullets code, #listas-definicion code {
+    font-family: monospace;
+    color: #f7ab3b;
+}
+
+/* Listas de Ejemplo */
+#listas-numeradas ol, #listas-bullets ul, #listas-definicion dl {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-left: 0;
+}
+
+#listas-numeradas ol li, #listas-bullets ul li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+/* Estilo para Listas de Definición */
+#listas-definicion dt {
+    font-weight: bold;
+    color: #1abc9c;
+    margin-top: 1rem;
+}
+
+#listas-definicion dd {
+    margin-left: 1rem;
+    color: #e0e0e0;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+
+/*==============SECCION IMAGENES==============*/
+
+
+#imagenes p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #e0e0e0;
+}
+
+#imagenes img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/*==============SECCION TABLAS==============*/
+#tablas h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: #1abc9c;
+    margin-bottom: 1.5rem;
+}
+
+#tablas p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #e0e0e0;
+}
+
+#tablas table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    color: #f5f5f5;
+}
+
+#tablas th, #tablas td {
+    border: 1px solid #1abc9c;
+    padding: 10px;
+    text-align: left;
+}
+
+#tablas th {
+    background-color: #333;
+    color: #1abc9c;
+}
+
+#tablas td {
+    background-color: #2b2b2b;
+}
+
+
+

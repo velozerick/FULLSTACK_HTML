@@ -60,6 +60,32 @@
                         <li><a href="#listas-definicion">Listas de Definición</a></li>
                     </ul>
                 </li>
+                <li>
+                    <button class="nav-title" onclick="toggleSubmenu('imagenes')">5. Imágenes</button>
+                    <ul class="submenu" id="imagenes">
+                        <li><a href="#imagenes">Introducción a Imágenes</a></li>
+                        <li><a href="#atributos-imagenes">Atributos de Imágenes</a></li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <button class="nav-title" onclick="toggleSubmenu('tablas')">6. Tablas</button>
+                    <ul class="submenu" id="tablas">
+                        <li><a href="#tablas">Introducción a Tablas</a></li>
+                        <li><a href="#estructura-tablas">Estructura de Tablas</a></li>
+                        <li><a href="#atributos-tablas">Atributos de Tablas</a></li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <button class="nav-title" onclick="toggleSubmenu('formularios')">7. Formularios</button>
+                    <ul class="submenu" id="formularios">
+                        <li><a href="#formularios">Introducción a Formularios</a></li>
+                        <li><a href="#elementos-formulario">Elementos de Formulario</a></li>
+                        <li><a href="#tipos-input">Tipos de Input</a></li>
+                    </ul>
+                </li>
+                
             </ul>
         </nav>
 
@@ -581,18 +607,148 @@
 
             <section id="listas-numeradas">
                 <h1>Listas Numeradas</h1>
-                <p>Para listas numeradas se usa el elemento `<ol>`...</p>
+                <p>Para crear una lista numerada en HTML, se usa el elemento <code>&lt;ol&gt;</code> (ordered list). Este elemento genera una lista ordenada donde cada ítem tiene un número de orden. Cada elemento de la lista se coloca dentro de una etiqueta <code>&lt;li&gt;</code> (list item).</p>
+            
+                <pre><code>
+            &lt;ol&gt;
+                &lt;li&gt;Primer elemento&lt;/li&gt;
+                &lt;li&gt;Segundo elemento&lt;/li&gt;
+                &lt;li&gt;Tercer elemento&lt;/li&gt;
+            &lt;/ol&gt;
+                </code></pre>
+            
+                <p>El resultado se verá así:</p>
+                <ol>
+                    <li>Primer elemento</li>
+                    <li>Segundo elemento</li>
+                    <li>Tercer elemento</li>
+                </ol>
             </section>
-
+            
             <section id="listas-bullets">
                 <h1>Listas con Viñetas</h1>
-                <p>Las listas con viñetas se crean con el elemento `<ul>`...</p>
+                <p>Las listas con viñetas se crean con el elemento <code>&lt;ul&gt;</code> (unordered list). Este tipo de lista no tiene un orden específico y muestra cada elemento con una viñeta. Cada ítem de la lista también se define con la etiqueta <code>&lt;li&gt;</code>.</p>
+            
+                <pre><code>
+            &lt;ul&gt;
+                &lt;li&gt;Elemento uno&lt;/li&gt;
+                &lt;li&gt;Elemento dos&lt;/li&gt;
+                &lt;li&gt;Elemento tres&lt;/li&gt;
+            &lt;/ul&gt;
+                </code></pre>
+            
+                <p>El resultado se verá así:</p>
+                <ul>
+                    <li>Elemento uno</li>
+                    <li>Elemento dos</li>
+                    <li>Elemento tres</li>
+                </ul>
             </section>
-
+            
             <section id="listas-definicion">
                 <h1>Listas de Definición</h1>
-                <p>El elemento `<dl>` define listas de términos y definiciones...</p>
+                <p>Las listas de definición se crean usando el elemento <code>&lt;dl&gt;</code> (definition list). Este tipo de lista se usa para mostrar términos y sus respectivas definiciones. Dentro de <code>&lt;dl&gt;</code>, los términos se definen con <code>&lt;dt&gt;</code> (definition term) y las definiciones con <code>&lt;dd&gt;</code> (definition description).</p>
+            
+                <pre><code>
+            &lt;dl&gt;
+                &lt;dt&gt;HTML&lt;/dt&gt;
+                &lt;dd&gt;Lenguaje de marcado para crear páginas web.&lt;/dd&gt;
+            
+                &lt;dt&gt;CSS&lt;/dt&gt;
+                &lt;dd&gt;Lenguaje de estilos para diseñar páginas web.&lt;/dd&gt;
+            &lt;/dl&gt;
+                </code></pre>
+            
+                <p>El resultado se verá así:</p>
+                <dl>
+                    <dt>HTML</dt>
+                    <dd>Lenguaje de marcado para crear páginas web.</dd>
+                    
+                    <dt>CSS</dt>
+                    <dd>Lenguaje de estilos para diseñar páginas web.</dd>
+                </dl>
             </section>
+
+
+
+
+            <section id="imagenes">
+                <h1>Imágenes en HTML</h1>
+                <p>En HTML, puedes insertar imágenes usando la etiqueta <code>&lt;img&gt;</code>. Esta etiqueta es auto-contenida y no requiere una etiqueta de cierre. El atributo <code>src</code> especifica la ruta de la imagen, mientras que <code>alt</code> proporciona una descripción de la imagen para accesibilidad.</p>
+                
+                <pre><code>
+            &lt;img src="ruta/de/imagen.jpg" alt="Descripción de la imagen"&gt;
+                </code></pre>
+            
+                <p>Ejemplo de una imagen en HTML:</p>
+                <img src="ruta/de/imagen.jpg" alt="Imagen de ejemplo">
+            </section>
+            
+            <section id="tablas">
+                <h1>Tablas en HTML</h1>
+                <p>Las tablas en HTML se crean con la etiqueta <code>&lt;table&gt;</code> y están organizadas en filas (<code>&lt;tr&gt;</code>) y celdas (<code>&lt;td&gt;</code>). La etiqueta <code>&lt;th&gt;</code> se utiliza para definir encabezados de columna.</p>
+            
+                <pre><code>
+            &lt;table&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;Encabezado 1&lt;/th&gt;
+                    &lt;th&gt;Encabezado 2&lt;/th&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Celda 1&lt;/td&gt;
+                    &lt;td&gt;Celda 2&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/table&gt;
+                </code></pre>
+            
+                <p>Ejemplo de tabla en HTML:</p>
+                <table>
+                    <tr>
+                        <th>Encabezado 1</th>
+                        <th>Encabezado 2</th>
+                    </tr>
+                    <tr>
+                        <td>Celda 1</td>
+                        <td>Celda 2</td>
+                    </tr>
+                </table>
+            </section>
+            
+            <section id="formularios">
+                <h1>Formularios en HTML</h1>
+                <p>Los formularios en HTML permiten recolectar datos del usuario. Se definen con la etiqueta <code>&lt;form&gt;</code> e incluyen varios elementos como <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, y <code>&lt;button&gt;</code>.</p>
+            
+                <pre><code>
+            &lt;form&gt;
+                &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+                &lt;input type="text" id="nombre" name="nombre"&gt;
+            
+                &lt;label for="email"&gt;Email:&lt;/label&gt;
+                &lt;input type="email" id="email" name="email"&gt;
+            
+                &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+            &lt;/form&gt;
+                </code></pre>
+            
+                <p>Ejemplo de un formulario en HTML:</p>
+                <form>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre">
+            
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+            
+                    <button type="submit">Enviar</button>
+                </form>
+            </section>
+            
+            
+
+
+
+
+
+
         </main>
     </div>
 
