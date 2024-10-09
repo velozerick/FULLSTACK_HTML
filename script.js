@@ -89,3 +89,16 @@ window.addEventListener("resize", () => {
 // Llamar a las funciones iniciales
 initParticles();
 animateParticles();
+
+
+
+
+
+
+//barra de navegacion lateral
+function toggleSubmenu(id) {
+    const submenu = document.getElementById(id);
+    const titleButton = submenu.previousElementSibling;
+    submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+    titleButton.classList.toggle('active');
+}

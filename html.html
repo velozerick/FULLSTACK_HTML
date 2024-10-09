@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+    <title>Aprende HTML Desde Cero</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="html.css">
+</head>
+<body>
+    <!-- Barra de navegación superior -->
+    <nav class="navegacion">
+        <ul>
+            <li><a href="inicio.html">INICIO</a></li>
+            <li><a href="html.html">HTML/CSS</a></li>
+            <li><a href="#js">JS/JQ</a></li>
+            <li><a href="#php">PHP</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- Barra de Navegación Lateral -->
+        <nav class="sidebar">
+            <h2>Contenido de HTML</h2>
+            <ul class="nav-list">
+                <li>
+                    <button class="nav-title" onclick="toggleSubmenu('intro')">1. Introducción</button>
+                    <ul class="submenu" id="intro">
+                        <li><a href="#que-es-html">¿Qué es HTML?</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <button class="nav-title" onclick="toggleSubmenu('estructura')">2. Estructura</button>
+                    <ul class="submenu" id="estructura">
+                        <li><a href="#entendiendo-estructura">Entendiendo la Estructura</a></li>
+                        <li><a href="#tags">Tags</a></li>
+                        <li><a href="#elementos">Elementos</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <button class="nav-title" onclick="toggleSubmenu('texto')">3. Texto</button>
+                    <ul class="submenu" id="texto">
+                        <li><a href="#headings">Encabezados</a></li>
+                        <li><a href="#parrafos">Párrafos</a></li>
+                        <li><a href="#negrita-italica">Negrita, Cursiva y Énfasis</a></li>
+                        <li><a href="#estructura-semantica">Estructura y Marcado Semántico</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <button class="nav-title" onclick="toggleSubmenu('listas')">4. Listas</button>
+                    <ul class="submenu" id="listas">
+                        <li><a href="#listas-numeradas">Listas Numeradas</a></li>
+                        <li><a href="#listas-bullets">Listas con Viñetas</a></li>
+                        <li><a href="#listas-definicion">Listas de Definición</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="main-container">
+        <!-- Contenido Principal -->
+        <main class="content">
+            <section id="que-es-html">
+                <h1>¿Qué es HTML?</h1>
+                <p>HTML, o HyperText Markup Language (Lenguaje de Marcado de Hipertexto), es el lenguaje básico utilizado para estructurar y presentar contenido en la web. Fue desarrollado por Tim Berners-Lee a finales de los años 80, y se considera el cimiento de cualquier sitio o aplicación web.</p>
+            </section>
+
+            <section id="entendiendo-estructura">
+                <h1>Entendiendo la Estructura</h1>
+                <p>La estructura básica de un documento HTML incluye...</p>
+            </section>
+
+            <section id="tags">
+                <h1>Tags</h1>
+                <p>Los tags son etiquetas que definen...</p>
+            </section>
+
+            <section id="elementos">
+                <h1>Elementos</h1>
+                <p>Los elementos HTML son...</p>
+            </section>
+
+            <section id="headings">
+                <h1>Encabezados</h1>
+                <p>Los encabezados (`<h1>` - `<h6>`) se utilizan para...</p>
+            </section>
+
+            <section id="parrafos">
+                <h1>Párrafos</h1>
+                <p>El elemento `<p>` se usa para definir párrafos...</p>
+            </section>
+
+            <section id="negrita-italica">
+                <h1>Negrita, Cursiva y Énfasis</h1>
+                <p>Las etiquetas `<b>`, `<i>` y `<em>` se usan para...</p>
+            </section>
+
+            <section id="estructura-semantica">
+                <h1>Estructura y Marcado Semántico</h1>
+                <p>El marcado semántico ayuda a definir...</p>
+            </section>
+
+            <section id="listas-numeradas">
+                <h1>Listas Numeradas</h1>
+                <p>Para listas numeradas se usa el elemento `<ol>`...</p>
+            </section>
+
+            <section id="listas-bullets">
+                <h1>Listas con Viñetas</h1>
+                <p>Las listas con viñetas se crean con el elemento `<ul>`...</p>
+            </section>
+
+            <section id="listas-definicion">
+                <h1>Listas de Definición</h1>
+                <p>El elemento `<dl>` define listas de términos y definiciones...</p>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
