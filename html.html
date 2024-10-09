@@ -28,12 +28,16 @@
                     <button class="nav-title" onclick="toggleSubmenu('intro')">1. Introducción</button>
                     <ul class="submenu" id="intro">
                         <li><a href="#que-es-html">¿Qué es HTML?</a></li>
+                        <li><a href="#ide">IDE</a></li>
+                        <li><a href="#instalacion-vscode">VSCODE</a></li>
+                        <li><a href="#ides-en-linea">IDEs en línea</a></li>
                     </ul>
                 </li>
                 <li>
                     <button class="nav-title" onclick="toggleSubmenu('estructura')">2. Estructura</button>
                     <ul class="submenu" id="estructura">
                         <li><a href="#entendiendo-estructura">Entendiendo la Estructura</a></li>
+                        <li><a href="#estructura-basica">Estructura básica</a></li>
                         <li><a href="#tags">Tags</a></li>
                         <li><a href="#elementos">Elementos</a></li>
                     </ul>
@@ -44,7 +48,6 @@
                         <li><a href="#headings">Encabezados</a></li>
                         <li><a href="#parrafos">Párrafos</a></li>
                         <li><a href="#negrita-italica">Negrita, Cursiva y Énfasis</a></li>
-                        <li><a href="#estructura-semantica">Estructura y Marcado Semántico</a></li>
                         <li><a href="#estructura-semantica">Estructura y Marcado Semántico</a></li>
                         <li><a href="#practica">Practica</a></li>
                     </ul>
@@ -69,6 +72,129 @@
                      presentar contenido en la web. Fue desarrollado por Tim Berners-Lee a finales de los años 80, y se considera el cimiento de cualquier sitio o aplicación web.</p>
             </section>
 
+            <section id="ide">
+                <h1>¿Qué es un IDE?</h1>
+                <p>Un **IDE** (Entorno de Desarrollo Integrado, por sus siglas en inglés) es una aplicación que proporciona herramientas útiles para escribir, editar y depurar código. Un IDE facilita el desarrollo al incluir características como autocompletado, resaltado de sintaxis, y depuración en tiempo real. Existen muchos IDEs, pero uno de los más populares para desarrollo web es **Visual Studio Code (VS Code)**, que es gratuito, personalizable y tiene muchas extensiones que mejoran su funcionalidad.</p>
+            </section>
+            
+            <section id="instalacion-vscode">
+                <h1>Instalación de Visual Studio Code</h1>
+                <p>A continuación, te mostramos los pasos para instalar VS Code y preparar tu entorno de desarrollo para crear páginas web. También aprenderás a instalar la extensión **Live Server**, que te permite ver los cambios en tu navegador en tiempo real.</p>
+            
+                <h2>Paso 1: Descarga de Visual Studio Code</h2>
+                <p>Visita la página oficial de Visual Studio Code en <a href="https://code.visualstudio.com/" target="_blank">https://code.visualstudio.com/</a> y selecciona el sistema operativo que estás utilizando (Windows, macOS, o Linux). Luego, haz clic en el botón de descarga.</p>
+            
+                <!-- Aquí puedes agregar una imagen de la página de descarga de VS Code -->
+                <img src="ruta/a/imagen-descarga-vscode.png" alt="Página de descarga de Visual Studio Code">
+            
+                <h2>Paso 2: Instalación de Visual Studio Code</h2>
+                <p>Una vez descargado el archivo, ábrelo para iniciar la instalación. Sigue las instrucciones en pantalla para completar el proceso. Asegúrate de marcar la opción de agregar VS Code al PATH si estás en Windows, ya que esto facilitará el uso de la terminal.</p>
+            
+                <!-- Imagen opcional del asistente de instalación -->
+                <img src="ruta/a/imagen-instalacion-vscode.png" alt="Asistente de instalación de Visual Studio Code">
+            
+                <h2>Paso 3: Iniciar Visual Studio Code</h2>
+                <p>Abre Visual Studio Code y familiarízate con la interfaz. Verás el panel de archivos a la izquierda, la ventana del editor en el centro y la barra de tareas con herramientas como la terminal integrada en la parte inferior.</p>
+            
+                <!-- Imagen opcional de la interfaz principal de VS Code -->
+                <img src="ruta/a/imagen-interfaz-vscode.png" alt="Interfaz de Visual Studio Code">
+            
+                <h2>Paso 4: Instalar la Extensión Live Server</h2>
+                <p>La extensión **Live Server** permite que tu navegador se actualice automáticamente cada vez que guardas cambios en tu archivo HTML. Para instalarla:</p>
+                <ol>
+                    <li>En Visual Studio Code, ve a la barra lateral izquierda y selecciona el ícono de extensiones (parece un cuadrado con cuatro partes).</li>
+                    <li>En la barra de búsqueda, escribe “Live Server”. Busca la extensión de **Ritwick Dey** y haz clic en "Instalar".</li>
+                </ol>
+            
+                <!-- Imagen de la búsqueda e instalación de Live Server -->
+                <img src="ruta/a/imagen-live-server.png" alt="Instalación de la extensión Live Server en VS Code">
+            
+                <h2>Paso 5: Crear tu Primer Proyecto</h2>
+                <p>Ahora que tienes VS Code configurado, puedes empezar tu proyecto de página web:</p>
+                <ol>
+                    <li>Crea una carpeta en tu computadora donde guardarás el proyecto (por ejemplo, “MiPaginaWeb”).</li>
+                    <li>Abre esa carpeta en VS Code seleccionando "Archivo" &gt; "Abrir carpeta".</li>
+                    <li>Dentro de la carpeta, crea un archivo llamado `index.html` y abre el archivo en VS Code.</li>
+                    <li>Escribe el siguiente código HTML básico:</li>
+                </ol>
+            
+                <pre><code>
+            &lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+                &lt;head&gt;
+                    &lt;title&gt;Mi Primera Página&lt;/title&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;h1&gt;¡Hola, mundo!&lt;/h1&gt;
+                    &lt;p&gt;Esta es mi primera página web usando Visual Studio Code.&lt;/p&gt;
+                &lt;/body&gt;
+            &lt;/html&gt;
+                </code></pre>
+            
+                <h2>Paso 6: Usar Live Server</h2>
+                <p>Para ver tu página en el navegador y que se actualice automáticamente, sigue estos pasos:</p>
+                <ol>
+                    <li>Haz clic derecho en el archivo `index.html` en el panel de archivos y selecciona “Open with Live Server”.</li>
+                    <li>Se abrirá tu navegador mostrando la página. Cada vez que guardes cambios en el archivo, la página se actualizará automáticamente.</li>
+                </ol>
+            
+                <!-- Imagen de la opción "Open with Live Server" en el menú contextual -->
+                <img src="ruta/a/imagen-open-live-server.png" alt="Abrir con Live Server en VS Code">
+            
+                <p>¡Listo! Ahora estás preparado para desarrollar páginas web en tiempo real usando Visual Studio Code y Live Server.</p>
+            </section>
+
+
+            <section id="ides-en-linea">
+                <h1>IDEs en Línea</h1>
+                <p>Los **IDEs en línea** son entornos de desarrollo integrados accesibles desde el navegador. Permiten escribir, ejecutar y probar código sin necesidad de instalar software adicional en tu computadora. Son útiles para trabajar en proyectos rápidos, colaborar con otros desarrolladores y acceder al proyecto desde cualquier dispositivo con conexión a internet.</p>
+            
+                <h2>Ventajas de Usar IDEs en Línea</h2>
+                <ul>
+                    <li><strong>Accesibilidad:</strong> Puedes acceder a tu entorno de desarrollo desde cualquier lugar, en cualquier dispositivo.</li>
+                    <li><strong>Sin instalación:</strong> No necesitas instalar software, lo que ahorra espacio en tu computadora y evita configuraciones complejas.</li>
+                    <li><strong>Colaboración:</strong> Muchos IDEs en línea permiten la colaboración en tiempo real, facilitando el trabajo en equipo.</li>
+                </ul>
+            
+                <h2>Principales Opciones de IDEs en Línea</h2>
+            
+                <h3>1. CodeSandbox</h3>
+                <p>**CodeSandbox** es una plataforma popular para desarrollo web que soporta varios lenguajes y frameworks como JavaScript, React, y Node.js. Ofrece un entorno visual completo con soporte para Live Preview, lo que permite ver los cambios en tiempo real.</p>
+                <p><strong>Pasos para comenzar con CodeSandbox:</strong></p>
+                <ol>
+                    <li>Visita <a href="https://codesandbox.io" target="_blank">https://codesandbox.io</a>.</li>
+                    <li>Regístrate o inicia sesión (puedes usar tu cuenta de GitHub o Google).</li>
+                    <li>Selecciona “Create Sandbox” y elige la plantilla HTML o el framework de tu preferencia.</li>
+                    <li>Empieza a escribir tu código en el editor. La vista previa se actualizará automáticamente.</li>
+                </ol>
+            
+                <!-- Imagen sugerida de CodeSandbox con una plantilla HTML abierta -->
+                <img src="ruta/a/imagen-codesandbox.png" alt="Entorno de CodeSandbox">
+            
+                <h3>2. Project IDX</h3>
+                <p>**Project IDX** es un IDE en línea desarrollado por Google, diseñado para crear aplicaciones web y móviles. IDX permite desarrollo en múltiples lenguajes y frameworks como JavaScript, Python, y Flutter. Es ideal para proyectos de desarrollo web y móvil con características avanzadas de integración y colaboración.</p>
+                <p><strong>Pasos para comenzar con Project IDX:</strong></p>
+                <ol>
+                    <li>Visita <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fidx.dev%2F&psig=AOvVaw0QGvC96HZQSxLoPFz8t9x3&ust=1728601904384000&source=images&cd=vfe&opi=89978449&ved=0CAQQn5wMahcKEwiQ0eyGtoKJAxUAAAAAHQAAAAAQBA" target="_blank">https://projectidx.dev</a> (requiere cuenta de Google para iniciar).</li>
+                    <li>Inicia un nuevo proyecto seleccionando el tipo de aplicación que deseas crear (web o móvil).</li>
+                    <li>Accede a las herramientas integradas de desarrollo, como el editor de código, terminal y vista previa en tiempo real.</li>
+                </ol>
+            
+                <!-- Imagen sugerida de la interfaz de Project IDX -->
+                <img src="ruta/a/imagen-project-idx.png" alt="Entorno de Project IDX">
+            
+                <h2>¿Cuál Debo Elegir?</h2>
+                <p>Ambos IDEs en línea son excelentes opciones, y la elección depende de tus necesidades:</p>
+                <ul>
+                    <li>**CodeSandbox** es ideal para proyectos de desarrollo web rápido, especialmente si trabajas con JavaScript o frameworks como React.</li>
+                    <li>**Project IDX** es una opción avanzada para aquellos que desean crear aplicaciones web y móviles con herramientas de Google y soporte para varios lenguajes.</li>
+                </ul>
+            
+                <p>Ambos entornos te permiten empezar a programar de inmediato, sin configuraciones complicadas, y ofrecen una experiencia similar a la de un IDE de escritorio.</p>
+            </section>
+            
+            
+
             <section id="entendiendo-estructura">
                 <h1>Entendiendo la Estructura</h1>
                 <p>HTML usa elementos para describir la estrucutra de las páginas.</p>
@@ -82,6 +208,44 @@
                     <img src="img/strcture.png" alt="Estructura de una página web" width="500px">
                 </figure>
             </section>
+
+            <section id="estructura-basica">
+                <h1>Estructura Básica de un Documento HTML</h1>
+                <p>Un documento HTML tiene una estructura específica que permite que el navegador interprete y muestre correctamente el contenido. A continuación, te mostramos la estructura básica y qué significa cada elemento:</p>
+            
+                <pre><code>
+            &lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;title&gt;Título de la Página&lt;/title&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                   
+                &lt;/body&gt;
+            &lt;/html&gt;
+                </code></pre>
+            
+                <h2>Explicación de Cada Parte</h2>
+                
+                <ul>
+                    <li><strong>&lt;!DOCTYPE html&gt;:</strong> Indica al navegador que el documento está escrito en HTML5. Este es un estándar para asegurar que el documento se renderice de manera correcta y moderna.</li>
+                    
+                    <li><strong>&lt;html&gt;:</strong> La etiqueta <code>&lt;html&gt;</code> es el contenedor principal de todo el documento HTML. Todo el contenido visible e invisible de la página debe estar contenido dentro de esta etiqueta.</li>
+                    
+                    <li><strong>&lt;head&gt;:</strong> El elemento <code>&lt;head&gt;</code> contiene metadatos sobre el documento. Aquí se incluyen información que no es visible en la página, como el título, enlaces a hojas de estilo, y configuraciones de codificación.</li>
+                    
+                    <li><strong>&lt;meta charset="UTF-8"&gt;:</strong> Define la codificación de caracteres como UTF-8, que es compatible con la mayoría de los idiomas y caracteres. Esto asegura que caracteres especiales se muestren correctamente en la página.</li>
+                    
+                    <li><strong>&lt;title&gt;:</strong> El contenido dentro de la etiqueta <code>&lt;title&gt;</code> se muestra en la pestaña del navegador cuando se carga la página. También es importante para el SEO (optimización de motores de búsqueda) ya que describe el contenido de la página.</li>
+                    
+                    <li><strong>&lt;body&gt;:</strong> El elemento <code>&lt;body&gt;</code> contiene todo el contenido visible de la página web. Aquí se incluyen elementos como encabezados, párrafos, imágenes, enlaces, etc.</li>
+                    
+                </ul>
+            
+                <p>Esta estructura es el punto de partida para cualquier documento HTML y define los elementos esenciales que todos los desarrolladores web deben conocer.</p>
+            </section>
+            
 
             <section id="tags">
                 <h1>Tags</h1>
