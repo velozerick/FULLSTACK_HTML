@@ -58,10 +58,10 @@ body {
 
 /* Espaciado adicional para evitar que el contenido quede oculto debajo de la barra */
 .content section{
-    padding-top: 80px; /* Espacio adicional para la navegación fija */
+    padding-top: 80px; 
     color: #f5f5f5;
-    max-width: 800px;
-    text-align: left; /* Texto alineado a la izquierda */
+    max-width: 900px;
+    text-align: left; 
 }
 p{
     font-size: 1.5em;
