@@ -45,6 +45,8 @@
                         <li><a href="#parrafos">Párrafos</a></li>
                         <li><a href="#negrita-italica">Negrita, Cursiva y Énfasis</a></li>
                         <li><a href="#estructura-semantica">Estructura y Marcado Semántico</a></li>
+                        <li><a href="#estructura-semantica">Estructura y Marcado Semántico</a></li>
+                        <li><a href="#practica">Practica</a></li>
                     </ul>
                 </li>
                 <li>
@@ -326,23 +328,92 @@
 
             <section id="headings">
                 <h1>Encabezados</h1>
-                <p>Los encabezados (`<h1>` - `<h6>`) se utilizan para...</p>
+                <p>Los encabezados en HTML, desde <code>&lt;h1&gt;</code> hasta <code>&lt;h6&gt;</code>, se utilizan para estructurar y organizar el contenido. Cada encabezado tiene un nivel de importancia, donde <code>&lt;h1&gt;</code> es el título principal de la página y <code>&lt;h6&gt;</code> el de menor relevancia. Los encabezados permiten que los usuarios y motores de búsqueda entiendan la jerarquía del contenido en la página. Por ejemplo:</p>
+                
+                <pre><code>&lt;h1&gt;Título Principal&lt;/h1&gt;
+            &lt;h2&gt;Subtítulo Nivel 1&lt;/h2&gt;
+            &lt;h3&gt;Subtítulo Nivel 2&lt;/h3&gt;</code></pre>
+            
+                <p>En una página HTML, es buena práctica usar solo un <code>&lt;h1&gt;</code> para el título principal y luego <code>&lt;h2&gt;</code> y otros encabezados para dividir el contenido en subsecciones.</p>
             </section>
-
+            
             <section id="parrafos">
                 <h1>Párrafos</h1>
-                <p>El elemento `<p>` se usa para definir párrafos...</p>
+                <p>El elemento <code>&lt;p&gt;</code> se usa para definir bloques de texto o párrafos en HTML. Cada vez que se necesita una nueva sección de texto, el contenido se coloca dentro de una etiqueta <code>&lt;p&gt;</code>. Esto facilita la lectura y estructura el contenido en fragmentos. Un ejemplo de uso del elemento de párrafo sería:</p>
+            
+                <pre><code>&lt;p&gt;Este es un párrafo de texto.&lt;/p&gt;
+            &lt;p&gt;Este es otro párrafo con información adicional.&lt;/p&gt;</code></pre>
             </section>
-
+            
             <section id="negrita-italica">
                 <h1>Negrita, Cursiva y Énfasis</h1>
-                <p>Las etiquetas `<b>`, `<i>` y `<em>` se usan para...</p>
+                <p>Las etiquetas <code>&lt;b&gt;</code>, <code>&lt;i&gt;</code> y <code>&lt;em&gt;</code> se utilizan para dar formato al texto, haciéndolo más legible y dándole un mayor énfasis en ciertos casos. Aquí te explico cada una:</p>
+            
+                <ul>
+                    <li><strong>&lt;b&gt; (Negrita):</strong> Se usa para destacar texto sin darle un significado adicional. Ejemplo: <code>&lt;b&gt;Texto en negrita&lt;/b&gt;</code></li>
+                    <li><strong>&lt;i&gt; (Cursiva):</strong> Se usa para poner el texto en cursiva. Puede indicar algo de menor importancia o una cita. Ejemplo: <code>&lt;i&gt;Texto en cursiva&lt;/i&gt;</code></li>
+                    <li><strong>&lt;em&gt; (Énfasis):</strong> Es similar a la cursiva, pero con la intención de darle un mayor significado al texto, útil para accesibilidad. Ejemplo: <code>&lt;em&gt;Texto con énfasis&lt;/em&gt;</code></li>
+                </ul>
             </section>
-
+            
             <section id="estructura-semantica">
                 <h1>Estructura y Marcado Semántico</h1>
-                <p>El marcado semántico ayuda a definir...</p>
+                <p>El marcado semántico en HTML utiliza etiquetas que describen el propósito del contenido. Este tipo de marcado mejora la accesibilidad y ayuda a los motores de búsqueda a entender el contenido de la página. Ejemplos de etiquetas semánticas son:</p>
+            
+                <ul>
+                    <li><code>&lt;header&gt;</code>: Define la cabecera de la página o sección, que puede incluir logotipos, menús o títulos.</li>
+                    <li><code>&lt;nav&gt;</code>: Contiene enlaces de navegación para el sitio.</li>
+                    <li><code>&lt;main&gt;</code>: Contiene el contenido principal de la página.</li>
+                    <li><code>&lt;section&gt;</code>: Agrupa contenido relacionado en una sección.</li>
+                    <li><code>&lt;article&gt;</code>: Representa contenido independiente, como un artículo o publicación.</li>
+                    <li><code>&lt;footer&gt;</code>: Define el pie de página de la página o sección, que puede incluir derechos de autor o información de contacto.</li>
+                </ul>
+            
+                <p>El uso adecuado de estos elementos mejora la estructura y hace que el código sea más claro y fácil de leer para los usuarios y los motores de búsqueda.</p>
             </section>
+
+
+
+
+
+
+            <section id="practica">
+                <h1>Practicando un Código Básico</h1>
+                <p>Escribe el siguiente código HTML en el cuadro de texto de abajo y luego presiona el botón "Verificar Código"
+                     para comprobar si está correcto:</p>
+            
+                <pre><code>
+            &lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+                &lt;head&gt;
+                    &lt;title&gt;Página de Práctica&lt;/title&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;h1&gt;Bienvenido a HTML&lt;/h1&gt;
+                    &lt;p&gt;Este es un párrafo introductorio donde puedes escribir sobre el propósito de la página.&lt;/p&gt;
+                    &lt;h2&gt;Sección de Contenido&lt;/h2&gt;
+                    &lt;p&gt;Aquí puedes agregar más información o detalles sobre el tema de la página.&lt;/p&gt;
+                    &lt;a href="https://example.com"&gt;Visita nuestro sitio web&lt;/a&gt;
+                &lt;/body&gt;
+            &lt;/html&gt;
+                </code></pre>
+            
+                <textarea id="userInput" rows="10" placeholder="Escribe aquí tu código HTML..."></textarea>
+                <button onclick="verificarCodigo()">Verificar Código</button>
+            
+                <p id="resultado"></p>
+            </section>
+            
+            
+
+
+
+
+
+
+
+
+
 
             <section id="listas-numeradas">
                 <h1>Listas Numeradas</h1>

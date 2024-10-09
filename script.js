@@ -102,3 +102,42 @@ function toggleSubmenu(id) {
     submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
     titleButton.classList.toggle('active');
 }
+
+
+
+
+//EJERCICIO 1
+function verificarCodigo() {
+    // Código HTML correcto, ajustado para que sea insensible a espacios y mayúsculas
+    const codigoCorrecto = `
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Página de Práctica</title>
+    </head>
+    <body>
+        <h1>Bienvenido a HTML</h1>
+        <p>Este es un párrafo introductorio donde puedes escribir sobre el propósito de la página.</p>
+        <h2>Sección de Contenido</h2>
+        <p>Aquí puedes agregar más información o detalles sobre el tema de la página.</p>
+        <a href="https://example.com">Visita nuestro sitio web</a>
+    </body>
+</html>
+    `.trim().replace(/\s+/g, ' ').toLowerCase();
+
+    // Obteniendo el código ingresado por el usuario y aplicando el mismo ajuste
+    const userInput = document.getElementById("userInput").value.trim().replace(/\s+/g, ' ').toLowerCase();
+
+    // Elemento donde mostraremos el resultado
+    const resultado = document.getElementById("resultado");
+
+    // Verificación
+    if (userInput === codigoCorrecto) {
+        resultado.textContent = "¡El código es correcto!";
+        resultado.style.color = "green";
+    } else {
+        resultado.textContent = "El código no es correcto. Revisa e inténtalo de nuevo.";
+        resultado.style.color = "red";
+    }
+}
+
