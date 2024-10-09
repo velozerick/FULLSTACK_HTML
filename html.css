@@ -160,3 +160,66 @@ p{
     font-weight: bold;
     padding-left: 10px;
 }
+
+
+
+
+
+
+
+
+
+
+/*==============SECCION TAGS==============*/
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    padding: 0.8rem;
+    text-align: left;
+    border: 1px solid #1abc9c;
+}
+
+th {
+    background-color: #1f1f1f;
+    color: #f5f5f5;
+    font-weight: bold;
+}
+
+td {
+    background-color: #2b2d42;
+    color: #f5f5f5;
+    font-family: monospace;
+}
+
+
+
+
+
+.elementos-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.elementos-th, .elementos-td {
+    padding: 0.8rem;
+    text-align: left;
+    border: 1px solid #1abc9c;
+}
+
+.elementos-th {
+    background-color: #1f1f1f;
+    color: #f5f5f5;
+    font-weight: bold;
+}
+
+.elementos-td {
+    background-color: #2b2d42;
+    color: #f5f5f5;
+    font-family: monospace;
+}
