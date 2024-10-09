@@ -62,7 +62,7 @@ function handleParticles() {
             const distance = Math.sqrt(dx * dx + dy * dy);
             if (distance < 80) { // Ajusta la distancia de conexión
                 ctx.strokeStyle = "rgba(26, 188, 156, 0.3)";
-                ctx.lineWidth = 0.2;
+                ctx.lineWidth = 1;
                 ctx.beginPath();
                 ctx.moveTo(particlesArray[i].x, particlesArray[i].y);
                 ctx.lineTo(particlesArray[j].x, particlesArray[j].y);
